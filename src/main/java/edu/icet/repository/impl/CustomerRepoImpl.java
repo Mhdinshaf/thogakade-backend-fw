@@ -16,7 +16,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 
     @Override
     public Boolean addCustomer(Customer customer) {
-        String sql = "INSERT INTO Customer (custID, custTitle, custName, DOB, salary, custAddress, city, province, postalCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Customer VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         int result = jdbcTemplate.update(sql,
                 customer.getCustID(),
                 customer.getCustTitle(),
