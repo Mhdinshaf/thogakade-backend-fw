@@ -16,7 +16,7 @@ public class ItemController  {
     private  final ItemService itemService;
 
     @PostMapping("/additem")
-    public Boolean additem(Item item) {
+    public Boolean additem(@RequestBody Item item) {
         return itemService.additem(item);
     }
 

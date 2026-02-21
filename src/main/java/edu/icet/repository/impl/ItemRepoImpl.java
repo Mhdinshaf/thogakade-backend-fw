@@ -16,7 +16,7 @@ public class ItemRepoImpl implements ItemRepo {
 
     @Override
     public Boolean addItem(Item item) {
-        String sql = "INSERT INTO item VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO item (ItemCode, Description, PackSize, UnitPrice, QtyOnHand) VALUES (?, ?, ?, ?, ?)";
         int result = jdbcTemplate.update(sql,
                 item.getItemCode(),
                 item.getDescription(),
